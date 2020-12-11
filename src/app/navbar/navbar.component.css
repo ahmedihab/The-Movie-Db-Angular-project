@@ -1,0 +1,80 @@
+
+.main-color{
+  color:red;
+}
+
+.mian-color{
+  color: #f25454 ;
+}
+
+.navbar {
+      position: absolute;
+      z-index: 9999;
+      width: 100%;
+      height: auto;
+      min-height: 0;
+      padding: 30px 0;
+      margin-bottom: 0;
+      border-radius: 0;
+      border: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      font-family: "Poppins", sans-serif;
+      -webkit-backface-visibility: hidden;
+  }
+
+
+
+#logo{
+ background-color:  rgb(204,201,182);
+ background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+}
+
+.navbar .navbar-social a>i {
+  padding: 0 10px;
+  color: #fff !important;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.navbar .navbar-social a:last-child>i {
+  padding-right: 0;
+}
+
+.navbar.navbar-nav .nav-item{
+
+  color: white !important;
+
+}
+
+.navbar.navbar-nav .nav-item:hover {
+
+  color: #f25454 ;
+}
+
+.navbar .navbar-nav>li>a {
+   color: white !important;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  padding-top: 0;
+  padding-bottom: 0;
+
+
+
+
+}
+
+
+.navbar .navbar-nav>li>a:hover{
+  color: #f25454 !important;
+
+}
+
+.navbar .navbar-nav .navbar-social>a>i:hover{
+  color: #f25454 !important;
+
+}

@@ -1,0 +1,28 @@
+<h1 class="py-3 my-3 text-center">Now playing Movies</h1>
+<div class="row">
+<div *ngFor="let movie of AllLatset" class="col-md-4  mb-3">
+  <a [routerLink]="['/moviedetails',movie.id]" >
+  <div class="movie m-auto my-3">
+
+    <div class="row  d-flex ">
+      <div class="col-md- text-center">
+        <img class="imgw text-center" [src]="ImgUrl+movie.poster_path" alt="">
+      </div>
+
+      <div class="info  p-3 my-2">
+          <div class="text-center  text-white mb-3 py-3">
+            <div  class=" ">
+            <h1>{{movie.original_title | textless}} </h1>
+            <p class="lead">{{movie.overview | textlessOver}}</p>
+          </div>
+            <div class="vote mb-3">
+              {{movie.vote_average}}
+            </div>
+          </div>
+
+      </div>
+       </div>
+      </div>
+    </a>
+</div>
+</div>

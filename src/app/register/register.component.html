@@ -1,0 +1,55 @@
+<h2 class="text-info text-center mt-3  "> register </h2>
+<form [formGroup]="myform" (ngSubmit)="getData()" >
+
+    <div class="form-group">
+        <label> frist Name : </label>
+        <input [class.is-invalid]="myform.get('first_name').invalid==true && myform.get('first_name').touched == true " formControlName="first_name"  class="form-control"  type="text">
+    </div>
+
+    <div *ngIf="myform.get('first_name').invalid==true && myform.get('first_name').touched == true " class="alert alert-danger" role="alert" >
+        firstName is Invaliad
+   </div>
+
+    <div class="form-group">
+        <label> last Name : </label>
+        <input   [class.is-invalid]="myform.get('last_name').invalid==true && myform.get('last_name').touched == true " formControlName="last_name"  class="form-control"  type="text">
+    </div>
+
+    <div *ngIf="myform.get('last_name').invalid==true && myform.get('last_name').touched == true " class="alert alert-danger" role="alert" >
+         lastName is Invaliad
+    </div>
+
+
+
+    <div class="form-group">
+        <label> E-mail : </label>
+        <input [class.is-invalid]="myform.get('email').invalid==true && myform.get('email').touched == true "  formControlName="email" class="form-control"  type="email">
+    </div>
+
+    <div *ngIf="myform.get('email').invalid==true && myform.get('email').touched == true " class="alert alert-danger" role="alert" >
+        E-mail is Invaliad
+   </div>
+
+   <div class="form-group">
+    <label> Age  </label>
+    <input [class.is-invalid]="myform.get('age').invalid==true && myform.get('age').touched == true " formControlName="age"  class="form-control"  type="number">
+</div>
+
+<div *ngIf="myform.get('age').invalid==true && myform.get('age').touched == true " class="alert alert-danger" role="alert" >
+    Age is Invaliad
+</div>
+
+    <div class="form-group">
+        <label> password : </label>
+        <input  [class.is-invalid]="myform.get('password').invalid==true && myform.get('password').touched == true "   formControlName="password"   class="form-control"  type="password">
+    </div>
+
+    <div *ngIf="myform.get('password').invalid==true && myform.get('password').touched == true " class="alert alert-danger" role="alert" >
+        password is Invaliad
+   </div>
+
+    <div class="text-center">
+    <button [disabled]="myform.invalid ==true" type="submit" class="btn btn-info " >submit </button>
+</div>
+</form>
+<a class="text-white" routerLink="/signin"> you have Account</a>

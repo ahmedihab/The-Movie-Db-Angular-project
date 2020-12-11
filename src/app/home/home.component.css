@@ -1,0 +1,21 @@
+.movie{
+ box-shadow: 0 0 10px #09c;
+}
+.info{
+  position: relative;
+}
+.vote{
+position: absolute;
+  top: 0;
+  right: 20px;
+  background-color: #09c;
+  padding: 8px;
+}
+.imgw
+{
+  width: 70%;
+}
+a:hover
+{
+  text-decoration: none;
+}

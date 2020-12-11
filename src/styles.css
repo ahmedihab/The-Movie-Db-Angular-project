@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+	background-color: #181824;
+    /* font-family: 'Playfair Display', serif; */
+    font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.movie{
+  box-shadow: 0 0 10px #09c;
+ }
+ .info{
+   position: relative;
+ }
+ .vote{
+ position: absolute;
+   top: 0;
+   right: 20px;
+   background-color: #09c;
+   padding: 8px;
+ }
+ .imgw
+ {
+   width: 70%;
+ }
+ a:hover
+ {
+   text-decoration: none;
+ }

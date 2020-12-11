@@ -1,0 +1,23 @@
+import { Component, OnInit } from '@angular/core';
+import {MovieService} from '../movie.service'
+
+@Component({
+  selector: 'app-popular',
+  templateUrl: './popular.component.html',
+  styleUrls: ['./popular.component.css']
+})
+export class PopularComponent implements OnInit {
+  ImgUrl:string = "https://image.tmdb.org/t/p/original";
+  AllLatset:any [] = [] ;
+  constructor(_MovieService:MovieService) {
+    _MovieService.GetLupcomingMovie().subscribe((data)=>{
+      this.AllLatset = data.results
+    },
+    (err)=>{
+      console.log(err)})
+   }
+
+  ngOnInit(): void {
+  }
+
+}

@@ -1,0 +1,27 @@
+
+  <div *ngIf='isLoding== true'  class="row py-3 my-3">
+
+        <div class="col-md-9">
+          <div class="row">
+              <img class="w-100" [src]="ImgUrl+movieDetils.backdrop_path" alt="">
+                <div class="MovieDetils">
+                  <h1 class="p-2">{{movieDetils.original_title}}  {{movieDetils.name}}</h1>
+                  <p class="lead">{{movieDetils.overview}}</p>
+                  <p class="lead"> language : {{movieDetils.original_language}}</p>
+                  <p class="lead"> Release Date :{{movieDetils.release_date}}</p>
+
+                </div>
+          </div>
+        </div>
+
+    <div class="col-md-3 text-center">
+          <h3> Trending Movie <br> Right Now</h3>
+            <div *ngFor='let movie of TopTen'>
+              <img class="w-50" [src]="ImgUrl+movie.poster_path" alt="">
+              <h1 class="p-2">{{movie.title |textless}}  </h1>
+
+            </div>
+            </div>
+
+
+  </div>

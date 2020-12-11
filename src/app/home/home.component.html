@@ -1,0 +1,63 @@
+
+<div class="container text-white text-center ">
+
+    <h1 class="py-3 my-3">Trending Movies</h1>
+  <div class="row">
+  <div *ngFor="let movie of trendingAll" class="col-md-4  mb-3">
+    <a [routerLink]="['/moviedetails',movie.id]" >
+    <div class="movie m-auto my-3">
+
+      <div class="row  d-flex justify-content-around">
+        <div class="col-md-">
+          <img class="imgw" [src]="ImgUrl+movie.poster_path" alt="">
+        </div>
+
+        <div class="info  p-3 my-2">
+            <div class="  text-white mb-3 py-3  ">
+              <div  class=" ">
+              <h1>{{movie.title | textless}} </h1>
+              <p class="lead">{{movie.overview | textlessOver}}</p>
+            </div>
+              <div class="vote mb-3">
+                {{movie.vote_average}}
+              </div>
+            </div>
+
+        </div>
+         </div>
+        </div>
+      </a>
+  </div>
+</div>
+
+<h1 class="py-3 my-3">Trending Tv</h1>
+<div class="row">
+<div *ngFor="let tv of trendingTv" class="col-md-4 ">
+  <a [routerLink]="['/moviedetails',tv.id]" >
+    <div class="movie m-auto my-3">
+
+      <div class="row  d-flex justify-content-around">
+        <div class="col-md-">
+          <img class="imgw" [src]="ImgUrl+tv.poster_path" alt="">
+        </div>
+
+        <div class="info  p-4 my-2">
+          <div class="  text-white mb-3 py-3  ">
+            <div  class=" ">
+            <h1>{{tv.name|textless }} </h1>
+            <p class="lead">{{tv.overview |tvless}}</p>
+          </div>
+            <div class="vote mb-3">
+              {{tv.vote_average}}
+            </div>
+          </div>
+
+        </div>
+         </div>
+        </div>
+      </a>
+</div>
+
+</div>
+
+</div>

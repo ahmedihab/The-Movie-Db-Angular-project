@@ -1,0 +1,29 @@
+<h2 class="text-info text-center  mt-3"> login Now </h2>
+<form [formGroup]="myform" (ngSubmit)="getData()" >
+
+    <div class="form-group">
+        <label> E-mail : </label>
+        <input [class.is-invalid]="myform.get('email').invalid==true && myform.get('email').touched == true "  formControlName="email" class="form-control"  type="email">
+    </div>
+
+    <div *ngIf="myform.get('email').invalid==true && myform.get('email').touched == true " class="alert alert-danger" role="alert" >
+        E-mail is Invaliad
+   </div>
+
+
+
+    <div class="form-group">
+        <label> password : </label>
+        <input  [class.is-invalid]="myform.get('password').invalid==true && myform.get('password').touched == true "   formControlName="password"   class="form-control"  type="password">
+    </div>
+
+    <div *ngIf="myform.get('password').invalid==true && myform.get('password').touched == true " class="alert alert-danger" role="alert" >
+        password is Invaliad
+   </div>
+
+    <div class="text-center">
+    <button [disabled]="myform.invalid ==true" type="submit" class="btn btn-info " >Login  </button>
+</div>
+</form>
+
+<a class="text-white" routerLink="/registr"> you Dont have Account</a>
