@@ -20,7 +20,9 @@ import { LatsetComponent } from './latset/latset.component';
 import { PopularComponent } from './popular/popular.component';
 import { NowPlayingComponent } from './now-playing/now-playing.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { TvComponent } from './tv/tv.component'
+import { TvComponent } from './tv/tv.component';
+import { NgxSpinnerModule } from "ngx-spinner";
+
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { TvComponent } from './tv/tv.component'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxSpinnerModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
