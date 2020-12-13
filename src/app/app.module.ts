@@ -25,6 +25,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { SearchPipe } from './search.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { ToastrModule } from 'ngx-toastr';
     NowPlayingComponent,
     ContactUsComponent,
     TvComponent,
-    SearchPipe
+    SearchPipe,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

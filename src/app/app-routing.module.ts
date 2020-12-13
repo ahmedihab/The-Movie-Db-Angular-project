@@ -5,6 +5,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
 import { LatsetComponent } from './latset/latset.component';
 import { MovieDetilesComponent } from './movie-detiles/movie-detiles.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { NowPlayingComponent } from './now-playing/now-playing.component';
 import { PopularComponent } from './popular/popular.component';
 import { RegisterComponent } from './register/register.component';
@@ -27,6 +28,9 @@ const routes: Routes = [
   {path:'Tv', canActivate:[AuthGuradService],component:TvComponent},
   {path:'home',canActivate:[AuthGuradService], component:HomeComponent},
   {path:'moviedetails/:id',canActivate:[AuthGuradService],component:MovieDetilesComponent},
+  {path:'**' , component:NotFoundComponent }
+
+
 ];
 
 @NgModule({
