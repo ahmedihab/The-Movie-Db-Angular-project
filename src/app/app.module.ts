@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import{HttpClientModule} from '@angular/common/http';
 import { MovieDetilesComponent } from './movie-detiles/movie-detiles.component';
 import { RegisterComponent } from './register/register.component' ;
-import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule , FormsModule} from '@angular/forms';
 import { TextlessPipe } from './textless.pipe';
 import { TextlessOverPipe } from './textless-over.pipe';
 import { SigninComponent } from './signin/signin.component';
@@ -22,7 +22,9 @@ import { NowPlayingComponent } from './now-playing/now-playing.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { TvComponent } from './tv/tv.component';
 import { NgxSpinnerModule } from "ngx-spinner";
-
+import { SearchPipe } from './search.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -42,14 +44,18 @@ import { NgxSpinnerModule } from "ngx-spinner";
     PopularComponent,
     NowPlayingComponent,
     ContactUsComponent,
-    TvComponent
+    TvComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgxSpinnerModule 
+    NgxSpinnerModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

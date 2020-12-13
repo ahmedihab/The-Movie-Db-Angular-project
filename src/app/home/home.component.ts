@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit {
   ImgUrl:string = "https://image.tmdb.org/t/p/original";
   trendingAll:any [] = [] ;
   trendingTv:any [] = [] ;
+  searchTerm:string ;
+
   constructor (_NgxSpinnerService:NgxSpinnerService,  public _MovieService:MovieService, public _Router:Router,
 
      ) {
